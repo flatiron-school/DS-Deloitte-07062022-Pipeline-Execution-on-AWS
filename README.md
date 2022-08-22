@@ -1,4 +1,4 @@
-**Note:** *After having covered the material in the [Pipeline Creation](https://github.com/flatiron-school/DS-Deloitte-07062022-Architecting-Pipelines-with-AWS/blob/main/Pipeline%20Creation.ipynb) and [Pipeline Execution](https://github.com/flatiron-school/DS-Deloitte-07062022-Architecting-Pipelines-with-AWS/blob/main/Pipeline%20Execution.ipynb) notebooks, the content in this notebook is intended to demonstrate an alternative workflow to that of the batch transformation pipeline -- the creation of a real-time inference endpoint!
+**Note:** *After having covered the material in the [Pipeline Creation](https://github.com/flatiron-school/DS-Deloitte-07062022-Architecting-Pipelines-with-AWS/blob/main/Pipeline%20Creation.ipynb) and [Pipeline Execution](https://github.com/flatiron-school/DS-Deloitte-07062022-Architecting-Pipelines-with-AWS/blob/main/Pipeline%20Execution.ipynb) notebooks, the content in this notebook is intended to demonstrate an alternative workflow to that of the batch transformation pipeline -- the creation of a real-time inference endpoint!*
 
 ![](images/aws-model-inference-options-2.png)
 
