@@ -1,5 +1,8 @@
-## Contents*
+**Note:** *After having covered the material in the [Pipeline Creation](https://github.com/flatiron-school/DS-Deloitte-07062022-Architecting-Pipelines-with-AWS/blob/main/Pipeline%20Creation.ipynb) and [Pipeline Execution](https://github.com/flatiron-school/DS-Deloitte-07062022-Architecting-Pipelines-with-AWS/blob/main/Pipeline%20Execution.ipynb) notebooks, the content in this notebook is intended to demonstrate an alternative workflow to that of the batch transformation pipeline -- the creation of a real-time inference endpoint!
 
+![](images/aws-model-inference-options-2.png)
+
+## Contents
 
 1. [Introduction](#Introduction)
 2. [Setup](#Setup)
@@ -8,7 +11,7 @@
 5. [Explaining Model Predictions](#Explain-the-model's-predictions-on-each-data-point)
 6. [Delete the Inference Endpoint](#Delete-Endpoint)
 
-* [Source](https://sagemaker-examples.readthedocs.io/en/latest/introduction_to_amazon_algorithms/xgboost_abalone/xgboost_inferenece_script_mode.html)
+[Source](https://sagemaker-examples.readthedocs.io/en/latest/introduction_to_amazon_algorithms/xgboost_abalone/xgboost_inferenece_script_mode.html)
 
 ## Introduction
     
@@ -35,11 +38,6 @@ Let's start by specifying:
 
 1. The S3 bucket and prefix that you want to use for training and model data. This should be within the same region as the Notebook Instance, training, and hosting.
 2. The IAM role arn used to give training and hosting access to your data. See the documentation for how to create these. Note, if more than one role is required for notebook instances, training, and/or hosting, please replace the boto regex with a the appropriate full IAM role arn string(s).
-
-
-```python
-# !pip3 install -U sagemaker
-```
 
 
 ```python
