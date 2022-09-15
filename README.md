@@ -13,13 +13,13 @@
 
 [Source](https://sagemaker-examples.readthedocs.io/en/latest/introduction_to_amazon_algorithms/xgboost_abalone/xgboost_inferenece_script_mode.html)
 
-## Introduction
+<h2 id="Introduction">Introduction</h2>
     
 This notebook shows how you can configure the SageMaker XGBoost model server by defining the following three functions in the Python source file you pass to the XGBoost constructor in the SageMaker Python SDK:
 - `input_fn`: Takes request data and deserializes the data into an object for prediction,
 - `predict_fn`: Takes the deserialized request object and performs inference against the loaded model, and
 - `output_fn`: Takes the result of prediction and serializes this according to the response content type.
-We will write a customized inference script that is designed to illustrate how [SHAP](https://github.com/slundberg/shap) values enable the interpretion of XGBoost models.
+We will write a customized inference script that is designed to illustrate how [SHAP](https://github.com/slundberg/shap) values enable the interpretation of XGBoost models.
 
 We use the [Abalone data](https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/regression.html), originally from the [UCI data repository](https://archive.ics.uci.edu/ml/datasets/abalone). More details about the original dataset can be found [here](https://archive.ics.uci.edu/ml/machine-learning-databases/abalone/abalone.names).  In this libsvm converted version, the nominal feature (Male/Female/Infant) has been converted into a real valued feature as required by XGBoost. Age of abalone is to be predicted from eight physical measurements.
 
@@ -30,7 +30,7 @@ This notebook uses the Abalone dataset to deploy a model server that returns SHA
     <td> <img src="images/output_9_0.png"/> </td>
 </tr></table>
 
-## Setup
+<h2 id="Setup">Setup</h2>
     
 This notebook was tested in Amazon SageMaker Studio on a `ml.t3.medium` instance.
 
@@ -89,7 +89,7 @@ sagemaker.Session().upload_data(FILE_DATA, bucket=bucket, key_prefix=prefix + "/
 
 
 
-## Training the XGBoost model
+<h2 id="Training-the-XGBoost-model">Training the XGBoost model</h2>
     
 SageMaker can now run an XGboost script using the XGBoost estimator. A typical training script loads data from the input channels, configures training with hyperparameters, trains a model, and saves a model to `model_dir` so that it can be hosted later. In this notebook, we use the same training script [abalone.py](https://github.com/awslabs/amazon-sagemaker-examples/blob/master/introduction_to_amazon_algorithms/xgboost_abalone/abalone.py) from [Regression with Amazon SageMaker XGBoost algorithm](https://github.com/awslabs/amazon-sagemaker-examples/blob/master/introduction_to_amazon_algorithms/xgboost_abalone/xgboost_abalone_dist_script_mode.ipynb). Refer to [Regression with Amazon SageMaker XGBoost algorithm](https://github.com/awslabs/amazon-sagemaker-examples/blob/master/introduction_to_amazon_algorithms/xgboost_abalone/xgboost_abalone_dist_script_mode.ipynb) for details on the training script.
 
@@ -459,7 +459,7 @@ def output_fn(predictions, content_type):
         raise ValueError("Content type {} is not supported.".format(content_type))
 ```
 
-## Deploying the XGBoost endpoint
+<h2 id="Deploying-the-XGBoost-endpoint">Deploying the XGBoost endpoint</h2>
 
 ### Deploy to an endpoint
     
@@ -493,7 +493,7 @@ predictor = xgb_inference_model.deploy(
 
     -----!
 
-## Explain the model's predictions on each data point
+<h2 id="Explain-the-model's-predictions-on-each-data-point">Explain the model's predictions on each data point</h2>
 
 
 ```python
@@ -590,8 +590,7 @@ predict_and_plot(predictor, an_old_abalone)
 ![png](images/output_9_0.png)
     
 
-
-## Delete Endpoint
+<h2 id="Delete-Endpoint">Delete Endpoint</h2>
 
 Run the `delete_endpoint` to remove the hosted endpoint and avoid any charges from a stray instance being left on:
 
