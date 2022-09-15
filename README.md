@@ -26,8 +26,8 @@ We use the [Abalone data](https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/dataset
 This notebook uses the Abalone dataset to deploy a model server that returns SHAP values, which enable us to create model explanation such as the following plots that show each features contributing to push the model output from the base value.
 
 <table><tr>
-    <td> <img src="images/output_8_0.png"/> </td>
-    <td> <img src="images/output_9_0.png"/> </td>
+    <td> <img src="https://raw.githubusercontent.com/flatiron-school/DS-Deloitte-07062022-Pipeline-Execution-on-AWS/main/images/output_8_0.png"> </td>
+    <td> <img src="https://raw.githubusercontent.com/flatiron-school/DS-Deloitte-07062022-Pipeline-Execution-on-AWS/main/images/output_9_0.png"> </td>
 </tr></table>
 
 <h2 id="Setup">Setup</h2>
@@ -573,7 +573,7 @@ predict_and_plot(predictor, a_young_abalone)
 
 
     
-![png](images/output_8_0.png)
+<img src="https://raw.githubusercontent.com/flatiron-school/DS-Deloitte-07062022-Pipeline-Execution-on-AWS/main/images/output_8_0.png">
     
 
 
@@ -587,7 +587,7 @@ predict_and_plot(predictor, an_old_abalone)
 
 
     
-![png](images/output_9_0.png)
+<img src="https://raw.githubusercontent.com/flatiron-school/DS-Deloitte-07062022-Pipeline-Execution-on-AWS/main/images/output_9_0.png">
     
 
 <h2 id="Delete-Endpoint">Delete Endpoint</h2>
